@@ -1,0 +1,123 @@
+/* Basic Reset and Typography */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Styles (Desktop First) */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Show links side-by-side on desktop */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+}
+
+.nav-toggle {
+    display: none; /* Hide toggle button on desktop */
+}
+
+/* Main Content Styling */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%; /* Make the image circular */
+}
+
+/* Form Styling */
+#contact-form label,
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea,
+#contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#contact-form button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* --- RESPONSIVE DESIGN: Mobile Styles --- */
+/* Use a media query to apply styles only when the screen is small (e.g., 768px or less) */
+@media (max-width: 768px) {
+    
+    /* Show the mobile toggle button */
+    .nav-toggle {
+        display: block;
+        background: none;
+        color: white;
+        border: 1px solid white;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    /* Stack links vertically and hide them by default */
+    .nav-links {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        background-color: #444;
+        z-index: 1000;
+    }
+    
+    /* Make the links full width */
+    .nav-links li {
+        text-align: center;
+        border-bottom: 1px solid #555;
+    }
+
+    /* Style for when the menu is open (toggled by JavaScript) */
+    .nav-links.open {
+        display: flex; /* Show the menu when the 'open' class is added */
+    }
+}
