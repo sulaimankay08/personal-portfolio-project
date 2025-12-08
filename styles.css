@@ -1,59 +1,92 @@
 /* Basic Reset and Typography */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* Lighter background */
+    color: #343a40;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    padding: 1.5em 2em;
+    display: flex;
+    flex-direction: column; /* Stack name and nav on top of each other */
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin-bottom: 0.1em;
+}
+
+header h2 {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-top: 0;
 }
 
 /* Navigation Styles (Desktop First) */
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Show links side-by-side on desktop */
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex; /* Show links side-by-side on desktop */
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.7em 1.5em;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-toggle {
-    display: none; /* Hide toggle button on desktop */
+    display: none; /* Hide toggle button on desktop */
 }
 
 /* Main Content Styling */
 main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 section {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.profile-img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 50%; /* Make the image circular */
+section h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skills-grid h3 {
+    color: #007bff;
+}
+
+.project-card {
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+    margin-top: 15px;
 }
 
 /* Form Styling */
@@ -62,62 +95,93 @@ section {
 #contact-form input[type="email"],
 #contact-form textarea,
 #contact-form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 #contact-form button {
-    background-color: #5cb85c;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #28a745; /* Green submit button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #218838;
 }
 
 /* Footer Styling */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    text-align: center;
+    padding: 25px;
+    background-color: #343a40;
+    color: #adb5bd;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffc107; /* Highlighted links */
+    text-decoration: none;
 }
 
 /* --- RESPONSIVE DESIGN: Mobile Styles --- */
-/* Use a media query to apply styles only when the screen is small (e.g., 768px or less) */
+/* Media query to ensure the website looks good on mobile devices (e.g., 768px and smaller) */
 @media (max-width: 768px) {
-    
-    /* Show the mobile toggle button */
-    .nav-toggle {
-        display: block;
-        background: none;
-        color: white;
-        border: 1px solid white;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
+    
+    header {
+        flex-direction: row; /* Put name and toggle side-by-side */
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
 
-    /* Stack links vertically and hide them by default */
-    .nav-links {
-        display: none; /* Hide the menu initially */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Position below the header */
-        left: 0;
-        background-color: #444;
-        z-index: 1000;
-    }
-    
-    /* Make the links full width */
-    .nav-links li {
-        text-align: center;
-        border-bottom: 1px solid #555;
-    }
+    header h2 {
+        display: none; /* Hide subtitle on small screens */
+    }
+    
+    /* Show the mobile toggle button */
+    .nav-toggle {
+        display: block;
+        background: none;
+        color: white;
+        border: 1px solid white;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 1em;
+    }
 
-    /* Style for when the menu is open (toggled by JavaScript) */
-    .nav-links.open {
-        display: flex; /* Show the menu when the 'open' class is added */
-    }
+    /* Stack links vertically and hide them by default */
+    .nav-links {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        background-color: #007bff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    /* Make the links full width */
+    .nav-links li {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-links li:first-child {
+        border-top: none;
+    }
+
+    /* Style for when the menu is open (toggled by JavaScript) */
+    .nav-links.open {
+        display: flex; /* Show the menu when the 'open' class is added */
+    }
 }
