@@ -1,88 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Beginner Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulaiman Kamara | Manufacturing Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <header>
-        <h1>[Your Name] – Beginner Developer</h1>
-        
-        <nav id="main-nav">
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
-                Menu
-            </button>
-            
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <header>
+        <h1>Sulaiman Kamara</h1>
+        <h2>Manufacturing Engineer & Automation Specialist</h2>
+        
+        <nav id="main-nav">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+                Menu
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main>
-        
-        <section id="about">
-            <h2>👋 About Me</h2>
-            <p>I am a beginner developer currently learning HTML, CSS, and JavaScript. I am passionate about building clean, accessible web pages and eager to start my first projects!</p>
-            <img src="profile.jpg" alt="A photo of me" class="profile-img">
-        </section>
+    <main>
+        
+        <section id="about">
+            <h2>👋 Professional Summary</h2>
+            <p>I am a <strong>Motivated and technically capable Manufacturing Engineer</strong> with hands-on experience in <strong>automation systems, Cobot programming, and process improvement</strong> in cleanroom environments. Known for contributing to cross-functional initiatives that improve production efficiency, product quality, and reliability. I apply lean manufacturing principles through <strong>time studies, standard work, and Kaizen activities</strong>. I'm also familiar with <strong>validation protocols (IQ, OQ, PQ)</strong>.</p>
+            <p>I hold a **Bachelor of Science in Mechanical Engineering** from the University of Massachusetts Lowell (Dec 2023).</p>
+            </section>
 
-        <section id="skills">
-            <h2>🛠️ Skills</h2>
-            <ul>
-                <li>HTML5 (Semantic Structure)</li>
-                <li>CSS3 (Basic Styling & Layout)</li>
-                <li>JavaScript (DOM Manipulation)</li>
-                <li>Git/GitHub (Version Control)</li>
-            </ul>
-        </section>
+        <section id="skills">
+            <h2>🛠️ Technical Skills & Tools</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Software & Automation</h3>
+                    <ul>
+                        <li><strong>Cobots:</strong> Kassow, OB7, Productive Robotics</li>
+                        <li><strong>Vision Systems:</strong> Keyence VS Machine Vision System (Certified)</li>
+                        <li><strong>CAD/FEA:</strong> SolidWorks, NX Siemens, Ansys, Abaqus</li>
+                        <li><strong>Data/Modeling:</strong> MATLAB, Minitab (Certified), Python</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Process & Quality</h3>
+                    <ul>
+                        <li><strong>Lean/CI:</strong> Kaizen, 5S, Standard Work, Time Studies</li>
+                        <li><strong>Validation:</strong> IQ, OQ, PQ Protocols</li>
+                        <li><strong>Analysis:</strong> Six Sigma, FEA, Root Cause (Fishbone)</li>
+                        <li><strong>Mechanical:</strong> Troubleshooting HMI diagnostics & PLC/Cobot code</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <section id="projects">
-            <h2>✨ Projects</h2>
-            <article class="project-card">
-                <h3>Project 1: Recipe Finder</h3>
-                <p>A simple HTML page showcasing proper formatting using lists, paragraphs, and external links.</p>
-                <a href="https://github.com/myusername/project1" target="_blank">View on GitHub</a>
-            </article>
-            <article class="project-card">
-                <h3>Project 2: Responsive Layout</h3>
-                <p>Practicing CSS Flexbox and Media Queries for responsive design.</p>
-            </article>
-        </section>
+        <section id="projects">
+            <h2>✨ Key Project Highlights</h2>
+            <article class="project-card">
+                <h3>Automated Inspection System (Integra Biosciences)</h3>
+                <p>Programmed Keyence VS creator vision system to inspect molded reservoirs on a conveyor, enabling labor reallocation. Tested and validated inspection process using <strong>IQ, OQ, and PQ protocols</strong> to negate future production issues.</p>
+            </article>
+            <article class="project-card">
+                <h3>Productive Robotics Cobot Setup (Integra Biosciences)</h3>
+                <p>Installed and programmed an OB7 cobot for a pick-and-stack action. Successfully <strong>improved packaging cycle time and labor by 50%</strong>.</p>
+            </article>
+            <article class="project-card">
+                <h3>Energy Efficiency Process (Freudenberg-NOK)</h3>
+                <p>Researched and tested energy-saving systems for a lubricant pump mixer, <strong>reducing energy consumption by 56%</strong> and resulting in an annual saving of <strong>$17,343</strong>.</p>
+            </article>
+            <article class="project-card">
+                <h3>Chem Line 1 Flare Fixture (Entegris Inc)</h3>
+                <p>Designed a fixture for flaring multiple filter nozzles, successfully <strong>reducing cycle time by 70%</strong> and enhancing quality.</p>
+            </article>
+        </section>
 
-        <section id="contact">
-            <h2>📧 Contact</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send Message</button>
-                <p id="form-status" aria-live="polite"></p>
-            </form>
-        </section>
-        
-    </main>
+        <section id="contact">
+            <h2>📧 Get in Touch</h2>
+            <p>I am eager to contribute my technical and automation expertise to solving new engineering challenges.</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+                <p id="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+        
+    </main>
 
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-        <p>
-            <a href="https://github.com/myusername" target="_blank">GitHub</a> | 
-            <a href="mailto:myemail@example.com">Email</a>
-        </p>
-    </footer>
+    <footer>
+        <p>&copy; 2024 Sulaiman Kamara. All rights reserved.</p>
+        <p>
+            <a href="https://www.linkedin.com/in/sulaiman-kamara" target="_blank">LinkedIn</a> | 
+            <a href="mailto:Sulaimankay08@gmail.com">Sulaimankay08@gmail.com</a> |
+            <a href="tel:6142090164">(614) 209-0164</a>
+        </p>
+    </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
